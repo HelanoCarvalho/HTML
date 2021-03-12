@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" href="../_css/estilo.css">
+    <link rel="stylesheet" href="../_css/form.css">
 </head>
 <body>
 <div id="interface">
@@ -24,42 +25,131 @@
          <li onmouseover="mudafoto('../_imagens/fotos.png')" onmouseout="mudafoto('../_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
          <li onmouseover="mudafoto('../_imagens/multimidia.png')" onmouseout="mudafoto('../_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
          <li onmouseover="mudafoto('../_imagens/contato.png')" onmouseout="mudafoto('../_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-     </ul>contatoer>
+     </ul>
+    </nav>
+    </header>
     
-<h3>Fale Conosco > Contato</h3>
-<h1>Formulário de Contato</h1>
-<h2>por Gustavo Guanabara</h2>
-<h3>Atualizado em 01/Maio/2013</h3>
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <h3>Fale Conosco > Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+        </header>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+<form method="POST">
+    <fieldset id="usuario">
+        <legend>Identificação do Usuário</legend>
+            <p><label for="cnome">Nome:</label> <input type="text" name="tnome" id="cnome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+            <p><label for="csenha">Senha:</label> <input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+            <p><label for="cmail">E-mail:</label> <input type="email" name="tmail" id="cmail" size="20" maxlength="40"></p>
+            <fieldset id="sexo">
+                <legend>Sexo:</legend>
+                    <input type="radio" name="tsexo" id="cmasc" checked><label for="cmasc"> Masculino</label> <br>
+                    <input type="radio" name="tsexo" id="cfem"> <label for="cfem">Feminino</label>
+            </fieldset>
+            <p><label for="cnasc">Data de Nascimento:</label> <input type="date" name="tnasc" id="cnasc"></p>
+    </fieldset>
+    
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+            <p><label for="crua">Logradouro:</label> <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ..."></p>
+            <p><label for="cnum">Número:</label> <input type="number" name="tnum" id="cnum" min="0" max="99999"></p>
+            <p><label for="cest">Estado:</label> <select name="test" id="cest">
+                <option value="DF">Distrito Federal</option>
+                <optgroup label="Norte">
+                             <option value="AM">Amazonas</option>
+                             <option value="RR">Roraima</option>
+                             <option value="AP">Amapá</option>
+                             <option value="PA">Pará</option>
+                             <option value="TO">Tocantins</option>
+                             <option value="RO">Rondônia</option>
+                             <option value="AC">Acre</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                             <option value="MA">Maranhão</option>
+                             <option value="PI">Piauí</option>
+                             <option value="CE">Ceará</option>
+                             <option value="RN">Rio Grande do Norte</option>
+                             <option value="PE">Pernambuco</option>
+                             <option value="PB">Paraíba</option>
+                             <option value="SE">Sergipe</option>
+                             <option value="AL">Alagoas</option>
+                             <option value="BA">Bahia</option>
+                </optgroup>
+                <optgroup label="Centro-Oeste">
+                             <option value="GO">Goiás</option>
+                             <option value="MS">Mato Grosso do Sul</option>
+                             <option value="MT">Mato Grosso</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                             <option value="SP">São Paulo</option>
+                             <option value="RJ">Rio de Janeiro</option>
+                             <option value="MG">Minas Gerais</option>
+                             <option value="ES">Espirito Santo</option>
+                </optgroup>
+                <optgroup label="Sul">
+                             <option value="PR">Paraná</option>
+                             <option value="RS">Rio Grande do Sul</option>
+                             <option value="SC">Santa Catarina</option>
+                </optgroup>
+             
+            </select></p>
+            <p><label for="ccid">Cidade:</label> <input type="text" name="tcid" id="ccid" maxlength="40" size="20" placeholder="Sua cidade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Rio Branco"></option>
+                <option value="Maceió"></option>
+                <option value="Macapá"></option>
+                <option value="Manaus"></option>
+                <option value="Salvador"></option>
+                <option value="Fortaleza"></option>
+                <option value="Brasília"></option>
+                <option value="Vitória"></option>
+                <option value="Goiânia"></option>
+                <option value="São Luís"></option>
+                <option value="Cuiabá"></option>
+                <option value="Campo Grande"></option>
+                <option value="Belo Horizonte"></option>
+                <option value="Belém"></option>
+                <option value="João Pessoa"></option>
+                <option value="Curitiba"></option>
+                <option value="Recife"></option>
+                <option value="Teresina"></option>
+                <option value="Rio de Janeiro"></option>
+                <option value="Natal"></option>
+                <option value="Porto Alegre"></option>
+                <option value="Porto Velho"></option>
+                <option value="Boa Vista"></option>
+                <option value="Florianópolis"></option>
+                <option value="São Paulo"></option>
+                <option value="Aracaju"></option>
+                <option value="Palmas"></option>
+             
+            </datalist>
+    </fieldset>
+    
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+            <p><label for="curg">Grau de Urgência:</label> Mín<input type="range" name="turg" id="curg" min="0" max="10">Máx</p>
+            <p><label for="cmsg">Mensagem:</label> <textarea name="tmsg" id="cmsg" cols="30" rows="10"></textarea></p>
+    </fieldset>
+    
+    <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+            <p><label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+            <p><label for="ccor">Cor:</label></p>
+            <p><label for="cqtd">Quantidade:</label></p>
+            <p><label for="ctot">Preço Total: R$</label></p>
+    </fieldset>
+    
+    
+    [BOTÃO ENVIAR]
+</form>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-
-
+   
+</article>
+</section>
 <footer id="rodape">
     <p>Copyright &copy;2013 - by Gustavo Guanabara <br>
         <a href="https://facebook.com/cursosemvideo" target="_blank">Facebook</a> | <a href="https://twitter.com/cursosemvideo" target="_blank">Twitter</a></p>
