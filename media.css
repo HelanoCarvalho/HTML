@@ -2,7 +2,7 @@ div#tv-radio{
     width: 900px;
     height: 580px;
     margin: auto;
-    background-image: url(../_imagens/radio-tv.png);
+    background-image: url(radio-tv.png);
     background-repeat: no-repeat;
 }
 

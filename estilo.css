@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @font-face{
     font-family: 'FonteLogo';
-    src: url(../_fonts/bubblegum-sans-regular.otf);
+    src: url(bubblegum-sans-regular.otf);
 }
 
 body{
@@ -41,7 +41,7 @@ a:hover{
 header#cabecalho{
     border-bottom: 1px #606060 solid;
     height: 150px;
-    background-image: url(../_imagens/glass-logo-peq.jpg);
+    background-image: url(glass-logo-peq.jpg);
     background-repeat: no-repeat;
     background-position: 0px 80px;
 }
