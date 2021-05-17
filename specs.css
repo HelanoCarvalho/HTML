@@ -4,6 +4,7 @@ section#conteudo{
 }
 
 iframe#frame-spec{
+    overflow-y: hidden;
     width: 400px;
     height: 280px;
     border: none;
